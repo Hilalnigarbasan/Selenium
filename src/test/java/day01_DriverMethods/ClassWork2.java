@@ -30,6 +30,7 @@ public class ClassWork2 {
 
         //https://www.walmart.com/ sayfasina gidin.
         driver.get("https://www.walmart.com/");
+
         //Sayfa basliginin “Walmart.com” icerdigini dogrulayin.
         String actualWalmartTitle = driver.getTitle();
         String expectedWalmartTitle = "Walmart.com";

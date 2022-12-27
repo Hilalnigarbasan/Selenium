@@ -20,8 +20,9 @@ public class C01_Examples {
         ve sayfayı kapatalım
          */
 
-        System.setProperty("webdriver.chrome.driver","src/resources/drivers/chromedriver.exe");
-        driver = new ChromeDriver();
+
+        System.setProperty("webdriver.chrome.driver","/Users/macmac/Documents/Selenium Libraries/Drivers/chromedriver");
+        WebDriver driver = new ChromeDriver();
 
         //İlk önce browser'i maximize yapalım sonra tüm sayfa için max bekleme süresi olarak 15 saniye belirtelim
         driver.manage().window().maximize();
@@ -37,8 +38,8 @@ public class C01_Examples {
         driver.navigate().back();
 
         //Amazon sayfasının Url'inin https://www.amazon.com/ adresine eşit olduğunu test edelim
-        String actualUrl = driver.getCurrentUrl();
-        String expectedUrl = "https://www.amazon.com/";
+        String actualUrl = driver.getCurrentUrl(); //gerçek
+        String expectedUrl = "https://www.amazon.com/"; //beklenen
         if(actualUrl.equals(expectedUrl)){
             System.out.println("Url TESTİ PASSED");
         }else System.out.println("Url TESTİ FAILED");
